@@ -1,11 +1,10 @@
-package com.security.nico.mycalculator.activities;
+package com.security.nico.mycalculator.Forms;
 
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
-import android.widget.EditText;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.SeekBar;
@@ -15,28 +14,31 @@ import android.widget.Toast;
 import com.security.nico.mycalculator.R;
 import com.security.nico.mycalculator.model.Student;
 
-public class Form extends AppCompatActivity implements View.OnClickListener {
+public class Form2 extends AppCompatActivity implements View.OnClickListener {
+
     final static String STUDENT_KEY = "STUDENT";
-    EditText nameEdit, emailEdit;
     TextView seekbarResult;
     RadioGroup radioGroup;
-    RadioButton civRadio, ceRadio, fashRadio, othersRadio;
+    RadioButton artRadio, scienceRadio, fashRadio, engRadio, tourismRadio;
     SeekBar moodSeekbar;
     Button submit;
+    String studentName= getIntent().getStringExtra("NAME");
+    String studentEmail= getIntent().getStringExtra("EMAIL");
+    String studentAge= getIntent().getStringExtra("AGE");
+    String studentNat= getIntent().getStringExtra("NAT");
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_radio_button);
+        setContentView(R.layout.activity_form2);
 
-        nameEdit = (EditText) findViewById(R.id.edName);
-        emailEdit = (EditText) findViewById(R.id.edEmail);
         seekbarResult = (TextView) findViewById(R.id.seekbarResult);
         radioGroup = (RadioGroup) findViewById(R.id.radioGroup);
-        civRadio = (RadioButton) findViewById(R.id.civRadioButton);
-        ceRadio = (RadioButton) findViewById(R.id.ceRadioButton);
-        fashRadio = (RadioButton) findViewById(R.id.fashRadioButton);
-        othersRadio = (RadioButton) findViewById(R.id.othersRadioButton);
+        artRadio = (RadioButton) findViewById(R.id.Arts);
+        scienceRadio = (RadioButton) findViewById(R.id.Sciences);
+        fashRadio = (RadioButton) findViewById(R.id.Business);
+        engRadio = (RadioButton) findViewById(R.id.Eng);
+        tourismRadio = (RadioButton) findViewById(R.id.Tourism);
         moodSeekbar = (SeekBar) findViewById(R.id.moodSeekBar);
 
         moodSeekbar.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
@@ -61,34 +63,35 @@ public class Form extends AppCompatActivity implements View.OnClickListener {
 
     @Override
     public void onClick(View view) {
-        if (nameEdit.getText().toString().length() == 0)
-            Toast.makeText(this, "Please enter a name", Toast.LENGTH_LONG).show();
-        else if (emailEdit.getText().toString().length() == 0)
-            Toast.makeText(this, "Please enter an email address", Toast.LENGTH_LONG).show();
-        else {
-            String studentName = nameEdit.getText().toString();
-            String studentEmail = emailEdit.getText().toString();
             String department = "";
             int mood = moodSeekbar.getProgress();
             switch (radioGroup.getCheckedRadioButtonId()) {
-                case R.id.civRadioButton:
-                    department = "CIV";
+                case R.id.Arts:
+                    department = "Arts";
                     break;
-                case R.id.ceRadioButton:
-                    department = "CE";
+                case R.id.Sciences:
+                    department = "Sciences";
                     break;
-                case R.id.fashRadioButton:
-                    department = "FASH";
+                case R.id.Business:
+                    department = "Business";
                     break;
-                case R.id.othersRadioButton:
-                    department = "Others";
+                case R.id.Eng:
+                    department = "Engineering";
+                    break;
+                case R.id.Tourism:
+                    department = "Tourism";
                     break;
             }
 
-            Student student = new Student(studentName, studentEmail, department, mood);
+            Student student = new Student(studentName, studentEmail,studentAge,studentNat, department, mood);
             Intent intent = new Intent(this, Display.class);
             intent.putExtra(STUDENT_KEY, (Student) student);
             startActivity(intent);
         }
+
+
+    @Override
+    public void onPointerCaptureChanged(boolean hasCapture) {
+
     }
 }

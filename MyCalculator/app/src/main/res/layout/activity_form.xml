@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/radioGroup"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/background3"
+    android:padding="20dp"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="Student Information"
+        android:textSize="30dp"
+        android:textStyle="bold"
+        android:layout_marginBottom="60dp"/>
+
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:textSize="20dp"
+        android:id="@+id/edName"
+        android:hint="Name"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/edEmail"
+        android:textSize="20dp"
+        android:hint="Email"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/edAge"
+        android:textSize="20dp"
+        android:hint="Age"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/edNat"
+        android:textSize="20dp"
+        android:hint="Nationality"/>
+
+
+    <Button
+        android:layout_width="300dp"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:id="@+id/submitButton"
+        android:layout_marginTop="90dp"
+        android:textSize="20dp"
+        android:layout_gravity="center"
+        android:text="Submit"/>
+
+</RadioGroup>

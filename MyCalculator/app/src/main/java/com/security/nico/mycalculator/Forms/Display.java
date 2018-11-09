@@ -1,4 +1,4 @@
-package com.security.nico.mycalculator.activities;
+package com.security.nico.mycalculator.Forms;
 
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
@@ -37,10 +37,10 @@ public class Display extends AppCompatActivity {
         editDeptIcon = (ImageView) findViewById(R.id.deptEditIcon);
         editMoodIcon = (ImageView) findViewById(R.id.moodEditIcon);
         if (getIntent().getExtras() != null) {
-            student = (Student) getIntent().getExtras().getSerializable(Form.STUDENT_KEY);
+            student = (Student) getIntent().getExtras().getSerializable(Form2.STUDENT_KEY);
             name.setText(student.getName());
             email.setText(student.getEmail());
-            dept.setText(student.getDept());
+            dept.setText(student.getMajor());
             mood.setText(student.getMood() + " % Positive");
             editNameIcon.setOnClickListener(new View.OnClickListener() {
                 @Override
@@ -95,8 +95,8 @@ public class Display extends AppCompatActivity {
                 email.setText(student.getEmail());
             }
             if (requestCode == DEPT_REQUEST) {
-                student.setDept(data.getExtras().getString(VALUE));
-                dept.setText(student.getDept());
+                student.setMajor(data.getExtras().getString(VALUE));
+                dept.setText(student.getMajor());
             }
             if (requestCode == MOOD_REQUEST) {
                 student.setMood(Integer.parseInt(data.getExtras().getString(VALUE)));

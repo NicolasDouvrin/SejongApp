@@ -14,7 +14,7 @@ import android.view.MenuItem;
 import android.widget.Toast;
 import com.security.nico.mycalculator.R;
 import com.security.nico.mycalculator.activities.Calculator;
-import com.security.nico.mycalculator.activities.Form;
+import com.security.nico.mycalculator.Forms.Form;
 import com.security.nico.mycalculator.activities.Home;
 import com.security.nico.mycalculator.activities.IsPrime;
 import com.security.nico.mycalculator.activities.SQLActivity;

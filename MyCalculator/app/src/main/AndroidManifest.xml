@@ -11,6 +11,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+
+
         <activity
             android:name=".Navigation.Menu"
             android:label="Menu" />
@@ -20,12 +22,10 @@
         <activity
             android:name=".activities.LoginActivity"
             android:label="Sejong App">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
+
+
         <activity
             android:name=".activities.Calculator"
             android:label="My Calculator"
@@ -43,9 +43,15 @@
             android:theme="@style/Theme.AppCompat" />
         <activity android:name=".activities.Home" />
         <activity android:name=".activities.Home2" />
-        <activity android:name=".activities.Form" />
-        <activity android:name=".activities.Display">
+        <activity android:name=".Forms.Form">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
         </activity>
+        <activity android:name=".Forms.Display"></activity>
+        <activity android:name=".Forms.Form2"></activity>
     </application>
 
 </manifest>
