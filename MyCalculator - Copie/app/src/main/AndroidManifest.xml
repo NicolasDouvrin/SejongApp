@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.security.nico.mycalculator">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name=".Navigation.Menu"
+            android:label="Menu" />
+        <activity
+            android:name=".activities.RegisterActivity"
+            android:label="Register" />
+        <activity
+            android:name=".activities.LoginActivity"
+            android:label="Sejong App">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".activities.Calculator"
+            android:label="My Calculator"
+            android:theme="@style/Theme.AppCompat" />
+        <activity
+            android:name=".activities.IsPrime"
+            android:label="Check Prime Number"
+            android:theme="@style/Theme.AppCompat" />
+        <activity
+            android:name=".activities.SQLActivity"
+            android:theme="@style/Theme.AppCompat" />
+        <activity
+            android:name=".activities.Members"
+            android:label="List of Members"
+            android:theme="@style/Theme.AppCompat" />
+        <activity android:name=".activities.Home" />
+        <activity android:name=".activities.Home2" />
+        <activity android:name=".activities.Form" />
+        <activity android:name=".activities.Display">
+        </activity>
+    </application>
+
+</manifest>
