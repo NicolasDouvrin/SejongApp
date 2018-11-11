@@ -22,7 +22,10 @@
         <activity
             android:name=".activities.LoginActivity"
             android:label="Sejong App">
-
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
         </activity>
 
 
@@ -43,15 +46,21 @@
             android:theme="@style/Theme.AppCompat" />
         <activity android:name=".activities.Home" />
         <activity android:name=".activities.Home2" />
-        <activity android:name=".Forms.Form">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
+        <activity
+            android:name=".Forms.Form"
+            android:theme="@style/Theme.AppCompat"
+            android:label="Form">
         </activity>
-        <activity android:name=".Forms.Display"></activity>
-        <activity android:name=".Forms.Form2"></activity>
+        <activity
+            android:name=".Forms.Display"
+            android:theme="@style/Theme.AppCompat"
+            android:label="Display Form">
+        </activity>
+        <activity
+            android:name=".Forms.Form2"
+            android:theme="@style/Theme.AppCompat"
+            android:label="Form">
+        </activity>
     </application>
 
 </manifest>

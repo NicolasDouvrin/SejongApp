@@ -19,13 +19,9 @@ public class Form2 extends AppCompatActivity implements View.OnClickListener {
     final static String STUDENT_KEY = "STUDENT";
     TextView seekbarResult;
     RadioGroup radioGroup;
-    RadioButton artRadio, scienceRadio, fashRadio, engRadio, tourismRadio;
     SeekBar moodSeekbar;
     Button submit;
-    String studentName= getIntent().getStringExtra("NAME");
-    String studentEmail= getIntent().getStringExtra("EMAIL");
-    String studentAge= getIntent().getStringExtra("AGE");
-    String studentNat= getIntent().getStringExtra("NAT");
+    String name, email, age, nat, major;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,11 +30,6 @@ public class Form2 extends AppCompatActivity implements View.OnClickListener {
 
         seekbarResult = (TextView) findViewById(R.id.seekbarResult);
         radioGroup = (RadioGroup) findViewById(R.id.radioGroup);
-        artRadio = (RadioButton) findViewById(R.id.Arts);
-        scienceRadio = (RadioButton) findViewById(R.id.Sciences);
-        fashRadio = (RadioButton) findViewById(R.id.Business);
-        engRadio = (RadioButton) findViewById(R.id.Eng);
-        tourismRadio = (RadioButton) findViewById(R.id.Tourism);
         moodSeekbar = (SeekBar) findViewById(R.id.moodSeekBar);
 
         moodSeekbar.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
@@ -63,31 +54,39 @@ public class Form2 extends AppCompatActivity implements View.OnClickListener {
 
     @Override
     public void onClick(View view) {
-            String department = "";
-            int mood = moodSeekbar.getProgress();
-            switch (radioGroup.getCheckedRadioButtonId()) {
-                case R.id.Arts:
-                    department = "Arts";
-                    break;
-                case R.id.Sciences:
-                    department = "Sciences";
-                    break;
-                case R.id.Business:
-                    department = "Business";
-                    break;
-                case R.id.Eng:
-                    department = "Engineering";
-                    break;
-                case R.id.Tourism:
-                    department = "Tourism";
-                    break;
-            }
 
-            Student student = new Student(studentName, studentEmail,studentAge,studentNat, department, mood);
-            Intent intent = new Intent(this, Display.class);
-            intent.putExtra(STUDENT_KEY, (Student) student);
-            startActivity(intent);
+        int mood = moodSeekbar.getProgress();
+        switch (radioGroup.getCheckedRadioButtonId()) {
+            case R.id.arts:
+                major = "Arts";
+                break;
+            case R.id.sciences:
+                major = "Sciences";
+                break;
+            case R.id.business:
+                major = "Business";
+                break;
+            case R.id.eng:
+                major = "Engineering";
+                break;
+            case R.id.tourism:
+                major = "Tourism";
+                break;
         }
+
+
+        name = getIntent().getExtras().getString(Form.STUDENT_NAME);
+        email = getIntent().getExtras().getString(Form.STUDENT_EMAIL);
+        age = getIntent().getExtras().getString(Form.STUDENT_AGE);
+        nat = getIntent().getExtras().getString(Form.STUDENT_NAT);
+
+        Toast.makeText(this, major,Toast.LENGTH_SHORT).show();
+
+        Student student = new Student(name, email, age, nat, major, mood);
+        Intent intent = new Intent(this, Display.class);
+        intent.putExtra(STUDENT_KEY, (Student) student);
+        startActivity(intent);
+    }
 
 
     @Override

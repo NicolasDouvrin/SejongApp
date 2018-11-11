@@ -9,14 +9,17 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 import com.security.nico.mycalculator.R;
+import com.security.nico.mycalculator.model.Student;
 
 public class Form extends AppCompatActivity implements View.OnClickListener {
-    final static String NAME = "STUDENT";
-    final static String EMAIL = "STUDENT";
-    final static String AGE = "STUDENT";
-    final static String NAT = "STUDENT";
+
     EditText nameEdit, emailEdit, ageEdit, natEdit;
     Button submit;
+    final static String STUDENT_KEY = "STUDENT";
+    final static String STUDENT_NAME = "NAME";
+    final static String STUDENT_EMAIL = "EMAIL";
+    final static String STUDENT_AGE = "AGE";
+    final static String STUDENT_NAT = "NAT";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,6 +28,8 @@ public class Form extends AppCompatActivity implements View.OnClickListener {
 
         nameEdit = (EditText) findViewById(R.id.edName);
         emailEdit = (EditText) findViewById(R.id.edEmail);
+        ageEdit = (EditText) findViewById(R.id.edAge);
+        natEdit = (EditText) findViewById(R.id.edNat);
         submit = (Button) findViewById(R.id.submitButton);
         submit.setOnClickListener(this);
     }
@@ -33,22 +38,23 @@ public class Form extends AppCompatActivity implements View.OnClickListener {
     public void onClick(View view) {
         if (nameEdit.getText().toString().length() == 0)
             Toast.makeText(this, "Please enter a name", Toast.LENGTH_LONG).show();
-        if (emailEdit.getText().toString().length() == 0)
+        else if (emailEdit.getText().toString().length() == 0)
             Toast.makeText(this, "Please enter an email address", Toast.LENGTH_LONG).show();
-        if (ageEdit.getText().toString().length() == 0)
+        else if (ageEdit.getText().toString().length() == 0)
             Toast.makeText(this, "Please enter an age", Toast.LENGTH_LONG).show();
-        if (natEdit.getText().toString().length() == 0)
+        else if (natEdit.getText().toString().length() == 0)
             Toast.makeText(this, "Please enter an nationality", Toast.LENGTH_LONG).show();
         else {
             String studentName = nameEdit.getText().toString();
             String studentEmail = emailEdit.getText().toString();
             String studentAge = ageEdit.getText().toString();
             String studentNat = natEdit.getText().toString();
+
             Intent intent = new Intent(this, Form2.class);
-            intent.putExtra(NAME, studentName);
-            intent.putExtra(EMAIL, studentEmail);
-            intent.putExtra(AGE, studentAge);
-            intent.putExtra(NAT, studentNat);
+            intent.putExtra(STUDENT_NAME, studentName);
+            intent.putExtra(STUDENT_EMAIL, studentEmail);
+            intent.putExtra(STUDENT_AGE, studentAge);
+            intent.putExtra(STUDENT_NAT, studentNat);
             startActivity(intent);
         }
     }

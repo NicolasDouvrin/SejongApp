@@ -77,7 +77,59 @@
         <TextView
             android:layout_width="120dp"
             android:layout_height="wrap_content"
-            android:text="Department :"
+            android:text="Age :"
+            android:textColor="#FFFFFF"
+            android:textSize="18dp"/>
+        <TextView
+            android:layout_height="wrap_content"
+            android:layout_width="200dp"
+            android:gravity="center"
+            android:textSize="18dp"
+            android:textColor="#FFFFFF"
+            android:id="@+id/ageTextView" />
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/ageEditIcon"
+            android:layout_marginLeft="20dp"
+            android:background="@drawable/ic_edit"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="30dp">
+        <TextView
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:text="Nationality :"
+            android:textColor="#FFFFFF"
+            android:textSize="18dp"/>
+        <TextView
+            android:layout_height="wrap_content"
+            android:layout_width="200dp"
+            android:gravity="center"
+            android:textSize="18dp"
+            android:textColor="#FFFFFF"
+            android:id="@+id/natTextView" />
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/natEditIcon"
+            android:layout_marginLeft="20dp"
+            android:background="@drawable/ic_edit"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="30dp">
+        <TextView
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:text="Major :"
             android:textColor="#FFFFFF"
             android:textSize="18dp"/>
         <TextView
@@ -86,11 +138,11 @@
             android:gravity="center"
             android:textColor="#FFFFFF"
             android:textSize="18dp"
-            android:id="@+id/departmentTextView" />
+            android:id="@+id/majorTextView" />
         <ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/deptEditIcon"
+            android:id="@+id/majorEditIcon"
             android:layout_marginLeft="20dp"
             android:background="@drawable/ic_edit"/>
     </LinearLayout>
@@ -120,6 +172,16 @@
             android:layout_marginLeft="20dp"
             android:background="@drawable/ic_edit"/>
     </LinearLayout>
+
+    <Button
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:id="@+id/finish"
+        android:gravity="center"
+        android:background="@drawable/button3"
+        android:layout_gravity="center"
+        android:text="Finish"/>
 
 
 </LinearLayout>
