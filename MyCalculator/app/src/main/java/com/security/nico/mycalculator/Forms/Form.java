@@ -1,4 +1,4 @@
-package com.security.nico.mycalculator.Forms;
+package com.security.nico.mycalculator.forms;
 
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
@@ -9,7 +9,6 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 import com.security.nico.mycalculator.R;
-import com.security.nico.mycalculator.model.Student;
 
 public class Form extends AppCompatActivity implements View.OnClickListener {
 

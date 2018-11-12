@@ -1,5 +1,6 @@
 package com.security.nico.mycalculator.activities;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.Snackbar;
 import android.support.design.widget.TextInputEditText;
@@ -14,6 +15,7 @@ import android.widget.Button;
 import com.security.nico.mycalculator.R;
 import com.security.nico.mycalculator.helper.InputValidation;
 import com.security.nico.mycalculator.model.User;
+import com.security.nico.mycalculator.navigation.Menu;
 import com.security.nico.mycalculator.sql.DatabaseHelper;
 
 public class RegisterActivity extends AppCompatActivity implements View.OnClickListener {
@@ -119,7 +121,8 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
             // Snack Bar to show success message that record saved successfully
             Snackbar.make(nestedScrollView, getString(R.string.success_message), Snackbar.LENGTH_LONG).show();
             emptyInputEditText();
-
+            Intent e= new Intent(RegisterActivity.this,LoginActivity.class);
+            startActivity(e);
 
         } else {
             // Snack Bar to show error message that record already exists

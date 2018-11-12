@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    tools:context=".Forms.Form2"
+    tools:context=".forms.Form2"
     android:background="@drawable/background3"
     android:id="@+id/radioGroup"
     android:padding="20dp"

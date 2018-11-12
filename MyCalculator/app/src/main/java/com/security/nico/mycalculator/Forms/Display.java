@@ -1,4 +1,4 @@
-package com.security.nico.mycalculator.Forms;
+package com.security.nico.mycalculator.forms;
 
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;

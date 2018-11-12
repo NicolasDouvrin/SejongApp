@@ -1,4 +1,4 @@
-package com.security.nico.mycalculator.Navigation;
+package com.security.nico.mycalculator.navigation;
 
 
 import android.content.Intent;
@@ -14,7 +14,7 @@ import android.view.MenuItem;
 import android.widget.Toast;
 import com.security.nico.mycalculator.R;
 import com.security.nico.mycalculator.activities.Calculator;
-import com.security.nico.mycalculator.Forms.Form;
+import com.security.nico.mycalculator.forms.Form;
 import com.security.nico.mycalculator.activities.Home;
 import com.security.nico.mycalculator.activities.IsPrime;
 import com.security.nico.mycalculator.activities.SQLActivity;

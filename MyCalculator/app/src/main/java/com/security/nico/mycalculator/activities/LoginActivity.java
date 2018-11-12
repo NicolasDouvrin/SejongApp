@@ -12,7 +12,7 @@ import android.support.v7.widget.AppCompatTextView;
 import android.view.View;
 import android.widget.TextView;
 
-import com.security.nico.mycalculator.Navigation.Menu;
+import com.security.nico.mycalculator.navigation.Menu;
 import com.security.nico.mycalculator.R;
 import com.security.nico.mycalculator.helper.InputValidation;
 import com.security.nico.mycalculator.sql.DatabaseHelper;

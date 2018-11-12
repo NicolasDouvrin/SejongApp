@@ -1,11 +1,10 @@
-package com.security.nico.mycalculator.Forms;
+package com.security.nico.mycalculator.forms;
 
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
-import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.SeekBar;
 import android.widget.TextView;

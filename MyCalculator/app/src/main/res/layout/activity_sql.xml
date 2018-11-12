@@ -8,7 +8,7 @@
     android:background="#001f36"
     android:orientation="vertical"
     android:weightSum="7"
-    tools:context=".Navigation.Menu">
+    tools:context=".navigation.Menu">
 
     <LinearLayout
         android:layout_width="120dp"

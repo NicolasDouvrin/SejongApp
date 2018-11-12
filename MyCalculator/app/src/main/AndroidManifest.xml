@@ -14,7 +14,7 @@
 
 
         <activity
-            android:name=".Navigation.Menu"
+            android:name=".navigation.Menu"
             android:label="Menu" />
         <activity
             android:name=".activities.RegisterActivity"
@@ -47,17 +47,17 @@
         <activity android:name=".activities.Home" />
         <activity android:name=".activities.Home2" />
         <activity
-            android:name=".Forms.Form"
+            android:name=".forms.Form"
             android:theme="@style/Theme.AppCompat"
             android:label="Form">
         </activity>
         <activity
-            android:name=".Forms.Display"
+            android:name=".forms.Display"
             android:theme="@style/Theme.AppCompat"
             android:label="Display Form">
         </activity>
         <activity
-            android:name=".Forms.Form2"
+            android:name=".forms.Form2"
             android:theme="@style/Theme.AppCompat"
             android:label="Form">
         </activity>

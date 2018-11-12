@@ -1,4 +1,4 @@
-package com.security.nico.mycalculator.Navigation;
+package com.security.nico.mycalculator.navigation;
 
 import android.os.Bundle;
 import android.support.annotation.NonNull;
